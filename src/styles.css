@@ -1,8 +1,23 @@
 .container {
-  padding: 20px;
   background-color: #ececec;
 }
 
+button {
+  padding: 5px 20px;
+  border: None;
+  background-color: #9fd3c7;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  background-color: #9fd3c7;
+  padding: 2px;
+}
+a:hover {
+  cursor: pointer;
+}
 input {
   padding: 10px 30px;
   text-align: center;
@@ -35,9 +50,7 @@ input {
 }
 
 .description {
-  position: relative;
-  top: 15px;
-  right: 70px;
+  text-align: left;
   font-family: "Cutive Mono", monospace;
   font-weight: bolder;
 }
