@@ -1,0 +1,67 @@
+.container {
+  padding: 20px;
+  background-color: #ececec;
+}
+
+input {
+  padding: 10px 30px;
+  text-align: center;
+  margin-top: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border-color: #142d4c;
+}
+
+.search_button {
+  padding: 5px 20px;
+  border: None;
+  background-color: #9fd3c7;
+}
+
+.search {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.today {
+  text-align: center;
+  padding: 20px;
+}
+.current_logo {
+  position: relative;
+  top: 20px;
+  right: -90px;
+  font-size: 50px;
+}
+
+.description {
+  position: relative;
+  top: 15px;
+  right: 70px;
+  font-family: "Cutive Mono", monospace;
+  font-weight: bolder;
+}
+
+.weekday {
+  font-size: 15px;
+  color: #142d4c;
+}
+
+.forecast {
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.fa-snowflake {
+  color: #38598b;
+}
+
+.fore {
+  font-size: 30px;
+}
+
+.fa-cloud-sun {
+  color: #385170;
+}

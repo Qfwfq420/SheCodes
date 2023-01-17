@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/23e98b7191.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="search" action="/submit">
+        <input
+          type="text"
+          name="city"
+          placeholder="Type a city name"
+          required
+        />
+        <br />
+        <input type="submit" value="Search!" class="search_button" />
+      </form>
+      <div class="row today">
+        <div class="col-6">
+          <i class="fa-regular fa-snowflake current_logo"></i>
+        </div>
+        <div class="col-6">
+          <p class="description">
+            Tehran
+            <br />
+            2°C | 35°F
+            <br />
+            Snow
+          </p>
+        </div>
+      </div>
+      <div class="row forecast">
+        <div class="col-2">
+          <span class="weekday">Thursday</span>
+          <br />
+          <i class="fa-regular fa-snowflake fore"></i>
+          <br />
+          2°C|36°F
+          <br />
+          Snow
+        </div>
+        <div class="col-2">
+          <span class="weekday">Friday</span>
+          <br />
+          <i class="fa-solid fa-cloud-sun fore"></i>
+          <br />
+          1°C|34°F
+          <br />
+          Partly cloudy
+        </div>
+        <div class="col-2">
+          <span class="weekday">Saturday</span>
+          <br />
+          <i class="fa-solid fa-cloud-sun fore"></i>
+          <br />
+          2°C|36°F
+          <br />
+          Partly cloudy
+        </div>
+        <div class="col-2">
+          <span class="weekday">Sunday</span>
+          <br />
+          <i class="fa-regular fa-snowflake fore"></i>
+          <br />
+          3°C|37°F
+          <br />
+          Snow
+        </div>
+        <div class="col-2">
+          <span class="weekday">Monday</span>
+          <br />
+          <i class="fa-solid fa-cloud-sun fore"></i>
+          <br />
+          6°C|43°F
+          <br />
+          Partly cloudy
+        </div>
+        <div class="col-2">
+          <span class="weekday">Tuesday</span>
+          <br />
+          <i class="fa-solid fa-cloud-sun fore"></i>
+          <br />
+          6°C|42°F
+          <br />
+          Partly cloudy
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
