@@ -79,3 +79,8 @@ input {
 .fa-cloud-sun {
   color: #385170;
 }
+
+#git {
+  font-size: 13px;
+  background: none;
+}
