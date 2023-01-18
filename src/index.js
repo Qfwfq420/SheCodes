@@ -107,9 +107,9 @@ function changeTemp(event) {
   data.forEach(function (obj) {
     temp = Number(obj.innerHTML);
     if (unit === "C") {
-      obj.innerHTML = Math.round(((temp - 32) * 5) / 9);
-    } else {
       obj.innerHTML = Math.round((temp * 9) / 5 + 32);
+    } else {
+      obj.innerHTML = Math.round(((temp - 32) * 5) / 9);
     }
   });
 }
