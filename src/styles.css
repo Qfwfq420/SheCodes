@@ -7,6 +7,10 @@
   padding: 10px 30px;
 }
 
+a {
+  text-decoration: None;
+}
+
 button {
   padding: 5px 20px;
   border: None;
