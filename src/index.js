@@ -23,7 +23,7 @@ function forecast(response) {
             <br />
             <span class='min data'>${Math.round(
               forecastDay.temp.min
-            )}</span>° - <span class='max data'>${Math.round(
+            )}</span>°|<span class='max data'>${Math.round(
           forecastDay.temp.max
         )}</span>°
           </div>`;
