@@ -90,8 +90,12 @@ input {
   color: #113f67;
 }
 
-.current_logo {
+.logo {
   background-color: #a2a8d3;
   border: none;
   border-radius: 50%;
+}
+
+.min {
+  opacity: 70%;
 }

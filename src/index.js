@@ -1,3 +1,43 @@
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function forecast(response) {
+  let forecastData = response.data.daily;
+  let forecastElement = document.querySelector(".forecast");
+  let html = ``;
+  forecastData.forEach(function (forecastDay, index) {
+    if ((index < 7) & (index > 0)) {
+      html =
+        html +
+        `<div class="col-2">
+            <span class="weekday">${formatDay(forecastDay.dt)}</span>
+            <br />
+            <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" width ="42" class = "logo"/>
+            <br />
+            <span class='min data'>${Math.round(
+              forecastDay.temp.min
+            )}</span>°|<span class='max data'>${Math.round(
+          forecastDay.temp.max
+        )}</span>°
+          </div>`;
+    }
+  });
+  forecastElement.innerHTML = html;
+}
+
+function getForecast(coord) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(forecast);
+}
+
 function getTempLoc(response) {
   let temp = document.querySelector("#num");
   temp.innerHTML = Math.round(response.data.main.temp);
@@ -10,6 +50,7 @@ function getTempLoc(response) {
   let desc = document.querySelector(".weather-description");
   wind.innerHTML = response.data.wind.speed;
   desc.innerHTML = response.data.weather[0].description;
+  getForecast(response.data.coord);
 }
 
 function getTemp(response) {
@@ -23,10 +64,9 @@ function getTemp(response) {
   let wind = document.querySelector(".wind-speed");
   let desc = document.querySelector(".weather-description");
   windValue = response.data.wind.speed;
-  console.log(windValue);
-  console.log(response.data.weather[0].description);
   wind.innerHTML = windValue;
   desc.innerHTML = response.data.weather[0].description;
+  getForecast(response.data.coord);
 }
 
 function basedOnLoc(position) {
@@ -63,6 +103,15 @@ function changeTemp(event) {
     num.innerHTML = Math.round(((temp - 32) * 5) / 9);
     link.innerHTML = "C";
   }
+  let data = document.querySelectorAll(".data");
+  data.forEach(function (obj) {
+    temp = Number(obj.innerHTML);
+    if (unit === "C") {
+      obj.innerHTML = Math.round(((temp - 32) * 5) / 9);
+    } else {
+      obj.innerHTML = Math.round((temp * 9) / 5 + 32);
+    }
+  });
 }
 
 function def(city) {
