@@ -50,14 +50,11 @@ input {
   padding: 20px;
 }
 
-.current_logo {
-  font-size: 50px;
-}
-
 .description {
   text-align: left;
   font-family: "Cutive Mono", monospace;
   font-weight: bolder;
+  margin-top: 7px;
 }
 
 .weekday {
@@ -72,21 +69,13 @@ input {
   font-size: 12px;
 }
 
-.fa-snowflake {
-  color: #38598b;
-}
-
 .fore {
   font-size: 30px;
 }
 
-.fa-cloud-sun {
-  color: #385170;
-}
-
 .location {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 #git {
@@ -94,4 +83,10 @@ input {
   background: none;
   display: block;
   margin: 0 auto;
+}
+
+.current_logo {
+  background-color: #142d4c;
+  border: none;
+  border-radius: 50%;
 }

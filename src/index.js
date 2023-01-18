@@ -6,8 +6,13 @@ function getTempLoc(response) {
 }
 
 function getTemp(response) {
+  let title = document.querySelector(".city");
+  title.innerHTML = response.data.name;
   let temp = document.querySelector("#num");
   temp.innerHTML = Math.round(response.data.main.temp);
+  let logo = document.querySelector(".current_logo");
+  let logoUrl = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+  logo.setAttribute(`src`, logoUrl);
 }
 
 function basedOnLoc(position) {
@@ -26,8 +31,6 @@ function loc(event) {
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input");
-  let title = document.querySelector(".city");
-  title.innerHTML = city.value;
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=${units}`;
