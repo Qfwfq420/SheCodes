@@ -1,5 +1,10 @@
-.container {
+.weather {
+  max-width: 650px;
   background-color: #ececec;
+  margin: 10px auto;
+  border: 1px solid #142d4c;
+  border-radius: 10px;
+  padding: 10px 30px;
 }
 
 button {
@@ -12,11 +17,12 @@ button {
   text-align: center;
 }
 
-a {
-  background-color: #9fd3c7;
+.convert {
   padding: 2px;
+  border: none;
+  border-radius: 5px;
 }
-a:hover {
+.convert:hover {
   cursor: pointer;
 }
 input {
@@ -43,10 +49,8 @@ input {
   text-align: center;
   padding: 20px;
 }
+
 .current_logo {
-  position: relative;
-  top: 20px;
-  right: -90px;
   font-size: 50px;
 }
 
@@ -80,7 +84,14 @@ input {
   color: #385170;
 }
 
+.location {
+  display: block;
+  margin: 0 auto;
+}
+
 #git {
   font-size: 13px;
   background: none;
+  display: block;
+  margin: 0 auto;
 }

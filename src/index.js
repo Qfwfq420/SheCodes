@@ -18,7 +18,7 @@ function basedOnLoc(position) {
   axios.get(apiUrl).then(getTempLoc);
 }
 
-function location(event) {
+function loc(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(basedOnLoc);
 }
@@ -67,8 +67,8 @@ time.innerHTML = timeString;
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
-let link = document.querySelector("a");
+let link = document.querySelector(".convert");
 link.addEventListener("click", changeTemp);
 
 let button = document.querySelector("button");
-button.addEventListener("click", location);
+button.addEventListener("click", loc);
